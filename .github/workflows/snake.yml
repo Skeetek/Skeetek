@@ -17,6 +17,16 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
+      # Runs BEFORE the snake step on purpose: Platane/snk is a Docker action
+      # running as root, and if it creates dist/ first this step (running as
+      # "runner") gets EACCES writing into it.
+      - name: generate stats card
+        env:
+          GH_USER: ${{ github.repository_owner }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUT: dist/stats.svg
+        run: python3 .github/scripts/gen_stats.py
+
       - name: generate contribution snake
         uses: Platane/snk@v3
         with:
@@ -24,15 +34,6 @@ jobs:
           outputs: |
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
-
-      # Self-hosted stats card: the public github-readme-stats instance is
-      # frequently paused, so render our own from the GraphQL API instead.
-      - name: generate stats card
-        env:
-          GH_USER: ${{ github.repository_owner }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OUT: dist/stats.svg
-        run: python3 .github/scripts/gen_stats.py
 
       - name: push to output branch
         uses: crazy-max/ghaction-github-pages@v4
