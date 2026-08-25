@@ -123,8 +123,7 @@ just fits. Where the software finally has to meet physics.
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Skeetek&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1220&title_color=22d3ee&text_color=c7d2e0&icon_color=a855f7&ring_color=22d3ee" alt="GitHub stats">
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Skeetek&layout=compact&langs_count=8&hide_border=true&bg_color=0d1220&title_color=22d3ee&text_color=c7d2e0" alt="Top languages">
+<img width="100%" src="https://raw.githubusercontent.com/Skeetek/Skeetek/output/stats.svg" alt="GitHub activity and top languages">
 
 <br><br>
 

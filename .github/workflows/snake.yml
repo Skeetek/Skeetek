@@ -1,4 +1,4 @@
-name: generate contribution snake
+name: generate profile assets
 
 on:
   schedule:
@@ -14,14 +14,25 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: generate snake svg
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: generate contribution snake
         uses: Platane/snk@v3
-        id: snake
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
+
+      # Self-hosted stats card: the public github-readme-stats instance is
+      # frequently paused, so render our own from the GraphQL API instead.
+      - name: generate stats card
+        env:
+          GH_USER: ${{ github.repository_owner }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUT: dist/stats.svg
+        run: python3 .github/scripts/gen_stats.py
 
       - name: push to output branch
         uses: crazy-max/ghaction-github-pages@v4
