@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg" alt="easyfragz — Web Developer, WordPress & AI-Assisted Builds" width="100%">
+<img src="assets/hero.svg" alt="Ruslan Labinski — Web Developer, WordPress & AI-Assisted Builds" width="100%">
 
 </div>
 
