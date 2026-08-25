@@ -14,7 +14,7 @@
 <tr><td width="62%" valign="top">
 
 Game developer at **Tvořiště s.r.o.** by day. Alongside that I build and maintain client
-sites **end-to-end** for **on-board.cz s.r.o.** — layout, styling, WordPress backend,
+sites **end-to-end** for **on-boarding co. s.r.o.** — layout, styling, WordPress backend,
 deploy — and build lead-sourcing & prospecting tooling for **Montei cz s.r.o.**
 
 I treat AI as a real production tool, not a party trick: Claude is in my daily loop for
@@ -29,7 +29,7 @@ name:     Ruslan Labinski
 role:     Game Developer
 company:
   - Tvořiště s.r.o.
-  - on-board.cz s.r.o.
+  - on-boarding co. s.r.o.
   - Montei cz s.r.o.
 based_in: Czechia
 focus:
@@ -62,7 +62,7 @@ a prototype into something that actually ships.
 </td><td width="50%" valign="top">
 
 #### ▲ &nbsp;Web, end-to-end
-**WordPress sites & landing pages · on-board.cz s.r.o.**
+**WordPress sites & landing pages · on-boarding co. s.r.o.**
 
 Custom WPCode snippets, CF7 forms, theme surgery. Responsive layouts and CSS that
 survives contact with a real CMS — clip-paths, layered backgrounds, the lot.
