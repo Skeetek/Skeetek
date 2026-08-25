@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg?v=5" alt="Ruslan Labinski — Web Developer, WordPress & AI-Assisted Builds" width="100%">
+<img src="assets/hero.svg?v=6" alt="Ruslan Labinski — Game Developer, Web Developer, Hardware Tinkerer" width="100%">
 
 </div>
 
@@ -8,16 +8,21 @@
 
 ## ◈ &nbsp;whoami
 
-I build and ship small web products **end-to-end** — layout, styling, WordPress backend, deploy.
-Claude and other AI tools are part of my day-to-day workflow, not a gimmick bolted on top.
+Game developer at **Tvořiště s.r.o.**, and on the side I build and ship small web products
+**end-to-end** — layout, styling, WordPress backend, deploy. Claude and other AI tools are part
+of my day-to-day workflow, not a gimmick bolted on top.
+
+Outside of both, I tinker with hardware — Arduino, Raspberry Pi, whatever's on the bench.
 
 <br>
 
 ## ◈ &nbsp;what I build
 
+- **Games** — gameplay systems and tooling as part of the team at Tvořiště s.r.o.
 - **WordPress sites & landing pages** — custom snippets (WPCode), CF7 forms, theme tweaks
 - **Frontend polish** — responsive layouts, CSS tricks (clip-paths, layered backgrounds), pixel-level tuning against a live preview instead of guesswork
 - **AI-assisted workflows** — pairing with Claude to move faster from spec to shipped page
+- **Hardware side projects** — Arduino and Raspberry Pi builds, sensors, small electronics tinkering
 
 <br>
 
