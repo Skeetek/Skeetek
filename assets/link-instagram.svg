@@ -6,7 +6,9 @@
       <stop offset="100%" stop-color="#6228d7"/>
     </linearGradient>
   </defs>
-  <rect x="1" y="1" width="188" height="44" rx="22" fill="rgba(255,255,255,0.04)" stroke="rgba(238,42,123,0.45)"/>
+  <rect x="1" y="1" width="188" height="44" rx="22" fill="rgba(255,255,255,0.04)" stroke="rgba(238,42,123,0.45)">
+    <animate attributeName="stroke-opacity" values="0.45;0.9;0.45" dur="2.6s" begin="0.3s" repeatCount="indefinite"/>
+  </rect>
   <rect x="22" y="15" width="16" height="16" rx="5" fill="none" stroke="url(#igGrad)" stroke-width="2"/>
   <circle cx="30" cy="23" r="3.5" fill="none" stroke="url(#igGrad)" stroke-width="2"/>
   <circle cx="35.5" cy="18.5" r="1.2" fill="url(#igGrad)"/>
