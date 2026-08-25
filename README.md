@@ -24,20 +24,7 @@ If it has a screen, a compiler or a GPIO pin, I've probably poked at it.
 
 </td><td width="38%" valign="top">
 
-```yaml
-name:     Ruslan Labinski
-role:     Game Developer
-company:
-  - Tvořiště s.r.o.
-  - on-boarding co. s.r.o.
-  - Montei cz s.r.o.
-based_in: Czechia
-focus:
-  - gameplay & tooling
-  - web, end-to-end
-  - embedded tinkering
-fuel:     coffee + solder fumes
-```
+<img src="assets/info-card.svg?v=1" alt="name: Ruslan Labinski, role: Game Developer / Web Developer / Automation Engineer, company: Tvořiště s.r.o., on-boarding co. s.r.o., Montei cz s.r.o., based_in: Czechia" width="100%">
 
 </td></tr>
 </table>
