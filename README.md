@@ -13,9 +13,9 @@
 <table>
 <tr><td width="62%" valign="top">
 
-Game developer at **Tvořiště s.r.o.** by day. The rest of the time I build small web
-products **end-to-end** — layout, styling, WordPress backend, deploy — and take apart
-whatever is sitting on the bench.
+Game developer at **Tvořiště s.r.o.** by day. Alongside that I build and maintain client
+sites **end-to-end** for **on-board.cz s.r.o.** — layout, styling, WordPress backend,
+deploy — and build lead-sourcing & prospecting tooling for **Montei cz s.r.o.**
 
 I treat AI as a real production tool, not a party trick: Claude is in my daily loop for
 scaffolding, refactors and the boring 80%, so I can spend the time on the 20% that matters.
@@ -27,7 +27,10 @@ If it has a screen, a compiler or a GPIO pin, I've probably poked at it.
 ```yaml
 name:     Ruslan Labinski
 role:     Game Developer
-company:  Tvořiště s.r.o.
+company:
+  - Tvořiště s.r.o.
+  - on-board.cz s.r.o.
+  - Montei cz s.r.o.
 based_in: Czechia
 focus:
   - gameplay & tooling
@@ -59,7 +62,7 @@ a prototype into something that actually ships.
 </td><td width="50%" valign="top">
 
 #### ▲ &nbsp;Web, end-to-end
-**WordPress sites & landing pages**
+**WordPress sites & landing pages · on-board.cz s.r.o.**
 
 Custom WPCode snippets, CF7 forms, theme surgery. Responsive layouts and CSS that
 survives contact with a real CMS — clip-paths, layered backgrounds, the lot.
@@ -86,6 +89,19 @@ Side-bench projects: sensors, small boards, and the occasional enclosure that on
 just fits. Where the software finally has to meet physics.
 
 `Arduino` `Raspberry Pi` `C++`
+
+</td></tr>
+<tr><td width="50%" valign="top">
+
+#### ▲ &nbsp;Lead sourcing & prospecting
+**Automation · Montei cz s.r.o.**
+
+Company & website discovery from public registries, quick SEO/quality checks, and
+contact extraction — turning raw business data into a qualified outbound list.
+
+`automation` `data` `scraping`
+
+</td><td width="50%" valign="top">
 
 </td></tr>
 </table>

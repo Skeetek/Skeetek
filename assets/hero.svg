@@ -63,15 +63,18 @@
     <clipPath id="card"><rect width="1200" height="360" rx="26"/></clipPath>
 
     <!-- Typewriter windows. Phrase 0 starts at FULL width so that if SMIL does not
-         run the line still reads correctly; phrases 1-2 start collapsed. -->
+         run the line still reads correctly; phrases 1-3 start collapsed. -->
     <clipPath id="typ0"><rect x="408" y="262" height="30" width="380">
-      <animate attributeName="width" values="0;380;380;0;0" keyTimes="0;.10;.267;.317;1" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="0;380;380;0;0" keyTimes="0;.1000;.1833;.2333;1" dur="12s" repeatCount="indefinite"/>
     </rect></clipPath>
     <clipPath id="typ1"><rect x="408" y="262" height="30" width="0">
-      <animate attributeName="width" values="0;0;346;346;0;0" keyTimes="0;.333;.433;.60;.65;1" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="0;0;346;346;0;0" keyTimes="0;.2500;.3500;.4333;.4833;1" dur="12s" repeatCount="indefinite"/>
     </rect></clipPath>
     <clipPath id="typ2"><rect x="408" y="262" height="30" width="0">
-      <animate attributeName="width" values="0;0;311;311;0;0" keyTimes="0;.667;.767;.933;.983;1" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="0;0;392;392;0;0" keyTimes="0;.5000;.6000;.6833;.7333;1" dur="12s" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <clipPath id="typ3"><rect x="408" y="262" height="30" width="0">
+      <animate attributeName="width" values="0;0;311;311;0;0" keyTimes="0;.7500;.8500;.9333;.9833;1" dur="12s" repeatCount="indefinite"/>
     </rect></clipPath>
   </defs>
 
@@ -126,13 +129,14 @@
       <text class="mono" x="386" y="292" fill="#64748b">$</text>
 
       <g clip-path="url(#typ0)"><text class="mono" x="408" y="292" fill="#e2e8f0">shipping games at Tvořiště s.r.o.</text></g>
-      <g clip-path="url(#typ1)"><text class="mono" x="408" y="292" fill="#e2e8f0">building web things end-to-end</text></g>
-      <g clip-path="url(#typ2)"><text class="mono" x="408" y="292" fill="#e2e8f0">soldering things that blink</text></g>
+      <g clip-path="url(#typ1)"><text class="mono" x="408" y="292" fill="#e2e8f0">building sites for on-board.cz</text></g>
+      <g clip-path="url(#typ2)"><text class="mono" x="408" y="292" fill="#e2e8f0">auditing leads at Montei cz s.r.o.</text></g>
+      <g clip-path="url(#typ3)"><text class="mono" x="408" y="292" fill="#e2e8f0">soldering things that blink</text></g>
 
       <rect class="cur" x="788" y="276" width="10" height="20" fill="#22d3ee">
         <animate attributeName="x"
-                 values="408;788;788;408;408;754;754;408;408;719;719;408;408"
-                 keyTimes="0;.10;.267;.317;.333;.433;.60;.65;.667;.767;.933;.983;1"
+                 values="408;788;788;408;408;754;754;408;408;800;800;408;408;719;719;408;408"
+                 keyTimes="0;.1000;.1833;.2333;.2500;.3500;.4333;.4833;.5000;.6000;.6833;.7333;.7500;.8500;.9333;.9833;1"
                  dur="12s" repeatCount="indefinite"/>
       </rect>
     </g>
