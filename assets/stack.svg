@@ -1,110 +1,146 @@
-<svg viewBox="0 0 1200 250" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      .pill { fill: rgba(255,255,255,0.04); stroke-width: 1.4; }
+      .pill { fill: rgba(255,255,255,0.05); stroke-width: 1.4; }
       .label { font-family: Consolas, 'Courier New', monospace; font-size: 15px; fill: #e2e8f0; }
     </style>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.2"/>
+    </filter>
     <radialGradient id="stackGlowA" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="stackGlowB" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.14"/>
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.16"/>
       <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
     </radialGradient>
     <clipPath id="stackClip">
-      <rect x="0" y="0" width="1200" height="250" rx="24"/>
+      <rect x="0" y="0" width="760" height="240" rx="20"/>
     </clipPath>
   </defs>
 
   <g clip-path="url(#stackClip)">
-    <rect x="0" y="0" width="1200" height="250" fill="rgba(255,255,255,0.015)"/>
-    <circle cx="80" cy="20" r="200" fill="url(#stackGlowA)"/>
-    <circle cx="1140" cy="230" r="240" fill="url(#stackGlowB)"/>
-    <rect x="0" y="0" width="1200" height="250" rx="24" fill="none" stroke="rgba(148,163,184,0.12)" stroke-width="1.5"/>
+    <rect x="0" y="0" width="760" height="240" fill="rgba(255,255,255,0.015)"/>
+    <circle cx="50" cy="15" r="130" fill="url(#stackGlowA)"/>
+    <circle cx="715" cy="225" r="150" fill="url(#stackGlowB)"/>
+    <rect x="0" y="0" width="760" height="240" rx="20" fill="none" stroke="rgba(148,163,184,0.12)" stroke-width="1.5"/>
+
+    <!--
+      Pill template per item:
+      outer <g translate(x,y)> handles entrance fade + fixed position
+      inner <g> handles continuous float bob
+      glow rect (blurred, pulsing) sits behind the crisp pill rect
+    -->
 
     <!-- Row 1 -->
-    <g transform="translate(271,34)" opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0s" fill="freeze"/>
-      <rect class="pill" width="151" height="44" rx="22" stroke="rgba(49,120,198,0.55)"/>
-      <circle cx="22" cy="22" r="5" fill="#3178C6"><animate attributeName="r" values="5;6.5;5" dur="2.4s" begin="0.3s" repeatCount="indefinite"/></circle>
-      <text class="label" x="36" y="27">TypeScript</text>
+    <g transform="translate(51,34)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0s" fill="freeze"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3s" begin="0.2s" repeatCount="indefinite"/>
+        <rect width="151" height="44" rx="22" fill="none" stroke="#3178C6" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.4s" begin="0.3s" repeatCount="indefinite"/></rect>
+        <rect class="pill" width="151" height="44" rx="22" stroke="rgba(49,120,198,0.6)"/>
+        <circle cx="22" cy="22" r="5" fill="#3178C6"><animate attributeName="r" values="5;6.5;5" dur="2.4s" begin="0.3s" repeatCount="indefinite"/></circle>
+        <text class="label" x="36" y="27">TypeScript</text>
+      </g>
     </g>
-    <g transform="translate(442,34)" opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.06s" fill="freeze"/>
-      <rect class="pill" width="86" height="44" rx="22" stroke="rgba(0,89,156,0.55)"/>
-      <circle cx="22" cy="22" r="5" fill="#00599C"><animate attributeName="r" values="5;6.5;5" dur="2.7s" begin="0.4s" repeatCount="indefinite"/></circle>
-      <text class="label" x="36" y="27">C++</text>
+    <g transform="translate(222,34)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.06s" fill="freeze"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.2s" begin="0.3s" repeatCount="indefinite"/>
+        <rect width="86" height="44" rx="22" fill="none" stroke="#00599C" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.7s" begin="0.4s" repeatCount="indefinite"/></rect>
+        <rect class="pill" width="86" height="44" rx="22" stroke="rgba(0,89,156,0.6)"/>
+        <circle cx="22" cy="22" r="5" fill="#00599C"><animate attributeName="r" values="5;6.5;5" dur="2.7s" begin="0.4s" repeatCount="indefinite"/></circle>
+        <text class="label" x="36" y="27">C++</text>
+      </g>
     </g>
-    <g transform="translate(548,34)" opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.12s" fill="freeze"/>
-      <rect class="pill" width="114" height="44" rx="22" stroke="rgba(55,118,171,0.55)"/>
-      <circle cx="22" cy="22" r="5" fill="#3776AB"><animate attributeName="r" values="5;6.5;5" dur="3s" begin="0.5s" repeatCount="indefinite"/></circle>
-      <text class="label" x="36" y="27">Python</text>
+    <g transform="translate(328,34)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.12s" fill="freeze"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="2.8s" begin="0.4s" repeatCount="indefinite"/>
+        <rect width="114" height="44" rx="22" fill="none" stroke="#3776AB" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="3s" begin="0.5s" repeatCount="indefinite"/></rect>
+        <rect class="pill" width="114" height="44" rx="22" stroke="rgba(55,118,171,0.6)"/>
+        <circle cx="22" cy="22" r="5" fill="#3776AB"><animate attributeName="r" values="5;6.5;5" dur="3s" begin="0.5s" repeatCount="indefinite"/></circle>
+        <text class="label" x="36" y="27">Python</text>
+      </g>
     </g>
-    <g transform="translate(682,34)" opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.18s" fill="freeze"/>
-      <rect class="pill" width="77" height="44" rx="22" stroke="rgba(155,79,150,0.55)"/>
-      <circle cx="22" cy="22" r="5" fill="#9B4F96"><animate attributeName="r" values="5;6.5;5" dur="2.6s" begin="0.6s" repeatCount="indefinite"/></circle>
-      <text class="label" x="36" y="27">C#</text>
+    <g transform="translate(462,34)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.18s" fill="freeze"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.4s" begin="0.5s" repeatCount="indefinite"/>
+        <rect width="77" height="44" rx="22" fill="none" stroke="#9B4F96" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.6s" begin="0.6s" repeatCount="indefinite"/></rect>
+        <rect class="pill" width="77" height="44" rx="22" stroke="rgba(155,79,150,0.6)"/>
+        <circle cx="22" cy="22" r="5" fill="#9B4F96"><animate attributeName="r" values="5;6.5;5" dur="2.6s" begin="0.6s" repeatCount="indefinite"/></circle>
+        <text class="label" x="36" y="27">C#</text>
+      </g>
     </g>
-    <g transform="translate(779,34)" opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.24s" fill="freeze"/>
-      <rect class="pill" width="151" height="44" rx="22" stroke="rgba(247,223,30,0.55)"/>
-      <circle cx="22" cy="22" r="5" fill="#F7DF1E"><animate attributeName="r" values="5;6.5;5" dur="2.9s" begin="0.7s" repeatCount="indefinite"/></circle>
-      <text class="label" x="36" y="27">JavaScript</text>
+    <g transform="translate(559,34)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.24s" fill="freeze"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+        <rect width="151" height="44" rx="22" fill="none" stroke="#F7DF1E" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.9s" begin="0.7s" repeatCount="indefinite"/></rect>
+        <rect class="pill" width="151" height="44" rx="22" stroke="rgba(247,223,30,0.6)"/>
+        <circle cx="22" cy="22" r="5" fill="#F7DF1E"><animate attributeName="r" values="5;6.5;5" dur="2.9s" begin="0.7s" repeatCount="indefinite"/></circle>
+        <text class="label" x="36" y="27">JavaScript</text>
+      </g>
     </g>
 
     <!-- Row 2 -->
-    <g transform="translate(347,98)" opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.3s" fill="freeze"/>
-      <rect class="pill" width="86" height="44" rx="22" stroke="rgba(119,123,180,0.55)"/>
-      <circle cx="22" cy="22" r="5" fill="#777BB4"><animate attributeName="r" values="5;6.5;5" dur="2.5s" begin="0.8s" repeatCount="indefinite"/></circle>
-      <text class="label" x="36" y="27">PHP</text>
+    <g transform="translate(127,98)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.3s" fill="freeze"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.1s" begin="0.7s" repeatCount="indefinite"/>
+        <rect width="86" height="44" rx="22" fill="none" stroke="#777BB4" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.5s" begin="0.8s" repeatCount="indefinite"/></rect>
+        <rect class="pill" width="86" height="44" rx="22" stroke="rgba(119,123,180,0.6)"/>
+        <circle cx="22" cy="22" r="5" fill="#777BB4"><animate attributeName="r" values="5;6.5;5" dur="2.5s" begin="0.8s" repeatCount="indefinite"/></circle>
+        <text class="label" x="36" y="27">PHP</text>
+      </g>
     </g>
-    <g transform="translate(453,98)" opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.36s" fill="freeze"/>
-      <rect class="pill" width="142" height="44" rx="22" stroke="rgba(33,117,155,0.55)"/>
-      <circle cx="22" cy="22" r="5" fill="#21759B"><animate attributeName="r" values="5;6.5;5" dur="2.8s" begin="0.9s" repeatCount="indefinite"/></circle>
-      <text class="label" x="36" y="27">WordPress</text>
+    <g transform="translate(233,98)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.36s" fill="freeze"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="2.9s" begin="0.8s" repeatCount="indefinite"/>
+        <rect width="142" height="44" rx="22" fill="none" stroke="#21759B" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.8s" begin="0.9s" repeatCount="indefinite"/></rect>
+        <rect class="pill" width="142" height="44" rx="22" stroke="rgba(33,117,155,0.6)"/>
+        <circle cx="22" cy="22" r="5" fill="#21759B"><animate attributeName="r" values="5;6.5;5" dur="2.8s" begin="0.9s" repeatCount="indefinite"/></circle>
+        <text class="label" x="36" y="27">WordPress</text>
+      </g>
     </g>
-    <g transform="translate(615,98)" opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.42s" fill="freeze"/>
-      <rect class="pill" width="114" height="44" rx="22" stroke="rgba(20,184,166,0.55)"/>
-      <circle cx="22" cy="22" r="5" fill="#14B8A6"><animate attributeName="r" values="5;6.5;5" dur="3.1s" begin="1s" repeatCount="indefinite"/></circle>
-      <text class="label" x="36" y="27">WPCode</text>
+    <g transform="translate(395,98)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.42s" fill="freeze"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.3s" begin="0.9s" repeatCount="indefinite"/>
+        <rect width="114" height="44" rx="22" fill="none" stroke="#14B8A6" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="3.1s" begin="1s" repeatCount="indefinite"/></rect>
+        <rect class="pill" width="114" height="44" rx="22" stroke="rgba(20,184,166,0.6)"/>
+        <circle cx="22" cy="22" r="5" fill="#14B8A6"><animate attributeName="r" values="5;6.5;5" dur="3.1s" begin="1s" repeatCount="indefinite"/></circle>
+        <text class="label" x="36" y="27">WPCode</text>
+      </g>
     </g>
-    <g transform="translate(749,98)" opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.48s" fill="freeze"/>
-      <rect class="pill" width="105" height="44" rx="22" stroke="rgba(227,79,38,0.55)"/>
-      <circle cx="22" cy="22" r="5" fill="#E34F26"><animate attributeName="r" values="5;6.5;5" dur="2.6s" begin="1.1s" repeatCount="indefinite"/></circle>
-      <text class="label" x="36" y="27">HTML5</text>
+    <g transform="translate(529,98)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.48s" fill="freeze"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3s" begin="1s" repeatCount="indefinite"/>
+        <rect width="105" height="44" rx="22" fill="none" stroke="#E34F26" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.6s" begin="1.1s" repeatCount="indefinite"/></rect>
+        <rect class="pill" width="105" height="44" rx="22" stroke="rgba(227,79,38,0.6)"/>
+        <circle cx="22" cy="22" r="5" fill="#E34F26"><animate attributeName="r" values="5;6.5;5" dur="2.6s" begin="1.1s" repeatCount="indefinite"/></circle>
+        <text class="label" x="36" y="27">HTML5</text>
+      </g>
     </g>
 
     <!-- Row 3 -->
-    <g transform="translate(333,162)" opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.54s" fill="freeze"/>
-      <rect class="pill" width="95" height="44" rx="22" stroke="rgba(21,114,182,0.55)"/>
-      <circle cx="22" cy="22" r="5" fill="#1572B6"><animate attributeName="r" values="5;6.5;5" dur="2.7s" begin="1.2s" repeatCount="indefinite"/></circle>
-      <text class="label" x="36" y="27">CSS3</text>
+    <g transform="translate(113,162)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.54s" fill="freeze"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.2s" begin="1.1s" repeatCount="indefinite"/>
+        <rect width="95" height="44" rx="22" fill="none" stroke="#1572B6" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.7s" begin="1.2s" repeatCount="indefinite"/></rect>
+        <rect class="pill" width="95" height="44" rx="22" stroke="rgba(21,114,182,0.6)"/>
+        <circle cx="22" cy="22" r="5" fill="#1572B6"><animate attributeName="r" values="5;6.5;5" dur="2.7s" begin="1.2s" repeatCount="indefinite"/></circle>
+        <text class="label" x="36" y="27">CSS3</text>
+      </g>
     </g>
-    <g transform="translate(448,162)" opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.6s" fill="freeze"/>
-      <rect class="pill" width="114" height="44" rx="22" stroke="rgba(36,150,237,0.55)"/>
-      <circle cx="22" cy="22" r="5" fill="#2496ED"><animate attributeName="r" values="5;6.5;5" dur="3s" begin="1.3s" repeatCount="indefinite"/></circle>
-      <text class="label" x="36" y="27">Docker</text>
+    <g transform="translate(228,162)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.6s" fill="freeze"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="2.8s" begin="1.2s" repeatCount="indefinite"/>
+        <rect width="114" height="44" rx="22" fill="none" stroke="#2496ED" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="3s" begin="1.3s" repeatCount="indefinite"/></rect>
+        <rect class="pill" width="114" height="44" rx="22" stroke="rgba(36,150,237,0.6)"/>
+        <circle cx="22" cy="22" r="5" fill="#2496ED"><animate attributeName="r" values="5;6.5;5" dur="3s" begin="1.3s" repeatCount="indefinite"/></circle>
+        <text class="label" x="36" y="27">Docker</text>
+      </g>
     </g>
-    <g transform="translate(582,162)" opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.66s" fill="freeze"/>
-      <rect class="pill" width="114" height="44" rx="22" stroke="rgba(255,255,255,0.5)"/>
-      <circle cx="22" cy="22" r="5" fill="#ffffff"><animate attributeName="r" values="5;6.5;5" dur="2.5s" begin="1.4s" repeatCount="indefinite"/></circle>
-      <text class="label" x="36" y="27">Vercel</text>
+    <g transform="translate(362,162)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.66s" fill="freeze"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.4s" begin="1.3s" repeatCount="indefinite"/>
+        <rect width="114" height="44" rx="22" fill="none" stroke="#ffffff" stroke-width="2" filter="url(#glow)" opacity="0.3"><animate attributeName="opacity" values="0.15;0.55;0.15" dur="2.5s" begin="1.4s" repeatCount="indefinite"/></rect>
+        <rect class="pill" width="114" height="44" rx="22" stroke="rgba(255,255,255,0.55)"/>
+        <circle cx="22" cy="22" r="5" fill="#ffffff"><animate attributeName="r" values="5;6.5;5" dur="2.5s" begin="1.4s" repeatCount="indefinite"/></circle>
+        <text class="label" x="36" y="27">Vercel</text>
+      </g>
     </g>
-    <g transform="translate(716,162)" opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.72s" fill="freeze"/>
-      <rect class="pill" width="151" height="44" rx="22" stroke="rgba(217,119,87,0.55)"/>
-      <circle cx="22" cy="22" r="5" fill="#D97757"><animate attributeName="r" values="5;6.5;5" dur="3.3s" begin="1.5s" repeatCount="indefinite"/></circle>
-      <text class="label" x="36" y="27">Claude API</text>
+    <g transform="translate(496,162)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.72s" fill="freeze"/>
+      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.1s" begin="1.4s" repeatCount="indefinite"/>
+        <rect width="151" height="44" rx="22" fill="none" stroke="#D97757" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="3.3s" begin="1.5s" repeatCount="indefinite"/></rect>
+        <rect class="pill" width="151" height="44" rx="22" stroke="rgba(217,119,87,0.6)"/>
+        <circle cx="22" cy="22" r="5" fill="#D97757"><animate attributeName="r" values="5;6.5;5" dur="3.3s" begin="1.5s" repeatCount="indefinite"/></circle>
+        <text class="label" x="36" y="27">Claude API</text>
+      </g>
     </g>
   </g>
 </svg>

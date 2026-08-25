@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg?v=4" alt="Ruslan Labinski — Web Developer, WordPress & AI-Assisted Builds" width="100%">
+<img src="assets/hero.svg?v=5" alt="Ruslan Labinski — Web Developer, WordPress & AI-Assisted Builds" width="100%">
 
 </div>
 
@@ -24,7 +24,7 @@ Claude and other AI tools are part of my day-to-day workflow, not a gimmick bolt
 ## ◈ &nbsp;stack
 
 <div align="center">
-<img src="assets/stack.svg?v=4" alt="TypeScript, C++, Python, C#, JavaScript, PHP, WordPress, WPCode, HTML5, CSS3, Docker, Vercel, Claude API" width="100%">
+<img src="assets/stack.svg?v=5" alt="TypeScript, C++, Python, C#, JavaScript, PHP, WordPress, WPCode, HTML5, CSS3, Docker, Vercel, Claude API" width="100%">
 </div>
 
 <br>
@@ -44,6 +44,6 @@ Claude and other AI tools are part of my day-to-day workflow, not a gimmick bolt
 
 <div align="center">
 
-<a href="https://guns.lol/easyfragz"><img src="assets/link-guns.svg?v=4" alt="Links" height="46"></a>&nbsp;&nbsp;<a href="https://www.instagram.com/easy.fragz/"><img src="assets/link-instagram.svg?v=4" alt="Instagram" height="46"></a>
+<a href="https://guns.lol/easyfragz"><img src="assets/link-guns.svg?v=5" alt="Links" height="46"></a>&nbsp;&nbsp;<a href="https://www.instagram.com/easy.fragz/"><img src="assets/link-instagram.svg?v=5" alt="Instagram" height="46"></a>
 
 </div>
