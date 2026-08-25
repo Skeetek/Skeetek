@@ -1,0 +1,20 @@
+<svg viewBox="0 0 1200 12" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#94a3b8" stop-opacity="0"/>
+      <stop offset="18%"  stop-color="#94a3b8" stop-opacity=".28"/>
+      <stop offset="82%"  stop-color="#94a3b8" stop-opacity=".28"/>
+      <stop offset="100%" stop-color="#94a3b8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sweep" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="260" y2="0">
+      <stop offset="0%"   stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        values="-300 0; 1240 0" dur="4.5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="g" x="-50%" y="-400%" width="200%" height="900%"><feGaussianBlur stdDeviation="2.2"/></filter>
+  </defs>
+  <rect x="0" y="5" width="1200" height="1.5" fill="url(#base)"/>
+  <rect x="0" y="4" width="1200" height="3" fill="url(#sweep)" filter="url(#g)"/>
+</svg>

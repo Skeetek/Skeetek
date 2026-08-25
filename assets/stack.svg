@@ -1,146 +1,127 @@
-<svg viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 840 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tech stack">
   <defs>
     <style>
-      .pill { fill: rgba(255,255,255,0.05); stroke-width: 1.4; }
-      .label { font-family: Consolas, 'Courier New', monospace; font-size: 15px; fill: #e2e8f0; }
+      .lbl { font-family: "SF Mono", Consolas, "Courier New", monospace; font-size: 15px; fill: #e2e8f0; }
+      .cat { font-family: "SF Mono", Consolas, "Courier New", monospace; font-size: 13px; letter-spacing: 2.5px; fill: #64748b; }
+
+      @keyframes pop    { from { opacity: 0; transform: translateY(10px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+      @keyframes bob    { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3.5px); } }
+      @keyframes breathe{ 0%,100% { opacity: .18; } 50% { opacity: .58; } }
+      @keyframes beat   { 0%,100% { r: 5; } 50% { r: 6.4; } }
+      @keyframes drift  { 0%,100% { transform: translate(0,0); } 50% { transform: translate(22px,-14px); } }
+      @keyframes drift2 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-18px,12px); } }
+
+      .pill  { opacity: 0; animation: pop .55s cubic-bezier(.2,.8,.3,1) forwards, bob 4.6s ease-in-out infinite 1s; }
+      .pglow { animation: breathe 3.4s ease-in-out infinite; fill: none; stroke-width: 2.4; }
+      .pdot  { animation: beat 3.4s ease-in-out infinite; }
+      .pbg   { fill: #ffffff; fill-opacity: .05; stroke-width: 1.4; }
+      .o1    { animation: drift 15s ease-in-out infinite; }
+      .o2    { animation: drift2 18s ease-in-out infinite; }
     </style>
-    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="3.2"/>
-    </filter>
-    <radialGradient id="stackGlowA" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+
+    <radialGradient id="gA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity=".13"/><stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="stackGlowB" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    <radialGradient id="gB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity=".15"/><stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
     </radialGradient>
-    <clipPath id="stackClip">
-      <rect x="0" y="0" width="760" height="240" rx="20"/>
-    </clipPath>
+    <filter id="bl" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3.4"/></filter>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0a0e17"/>
+      <stop offset="55%"  stop-color="#0d1220"/>
+      <stop offset="100%" stop-color="#0a0f1c"/>
+    </linearGradient>
+    <clipPath id="cc"><rect width="840" height="300" rx="22"/></clipPath>
   </defs>
 
-  <g clip-path="url(#stackClip)">
-    <rect x="0" y="0" width="760" height="240" fill="rgba(255,255,255,0.015)"/>
-    <circle cx="50" cy="15" r="130" fill="url(#stackGlowA)"/>
-    <circle cx="715" cy="225" r="150" fill="url(#stackGlowB)"/>
-    <rect x="0" y="0" width="760" height="240" rx="20" fill="none" stroke="rgba(148,163,184,0.12)" stroke-width="1.5"/>
+  <g clip-path="url(#cc)">
+    <rect width="840" height="300" fill="url(#cardBg)"/>
+    <circle class="o1" cx="60"  cy="20"  r="180" fill="url(#gA)"/>
+    <circle class="o2" cx="790" cy="285" r="200" fill="url(#gB)"/>
+    <rect width="840" height="300" rx="22" fill="none" stroke="#94a3b8" stroke-opacity=".13" stroke-width="1.5"/>
 
-    <!--
-      Pill template per item:
-      outer <g translate(x,y)> handles entrance fade + fixed position
-      inner <g> handles continuous float bob
-      glow rect (blurred, pulsing) sits behind the crisp pill rect
-    -->
+    <!-- ══ LANGUAGES ══ -->
+    <rect x="26" y="44" width="3" height="24" rx="1.5" fill="#3178C6"/>
+    <text class="cat" x="40" y="61">LANGUAGES</text>
+    <g transform="translate(162,34)"><g class="pill" style="animation-delay:.05s">
+      <rect class="pglow" width="75" height="44" rx="22" stroke="#00599C" filter="url(#bl)"/>
+      <rect class="pbg" width="75" height="44" rx="22" stroke="#00599C" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#00599C"/><text class="lbl" x="32" y="27">C++</text></g></g>
+    <g transform="translate(248,34)"><g class="pill" style="animation-delay:.11s">
+      <rect class="pglow" width="66" height="44" rx="22" stroke="#9B4F96" filter="url(#bl)"/>
+      <rect class="pbg" width="66" height="44" rx="22" stroke="#9B4F96" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#9B4F96"/><text class="lbl" x="32" y="27">C#</text></g></g>
+    <g transform="translate(325,34)"><g class="pill" style="animation-delay:.17s">
+      <rect class="pglow" width="102" height="44" rx="22" stroke="#3776AB" filter="url(#bl)"/>
+      <rect class="pbg" width="102" height="44" rx="22" stroke="#3776AB" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#3776AB"/><text class="lbl" x="32" y="27">Python</text></g></g>
+    <g transform="translate(438,34)"><g class="pill" style="animation-delay:.23s">
+      <rect class="pglow" width="138" height="44" rx="22" stroke="#3178C6" filter="url(#bl)"/>
+      <rect class="pbg" width="138" height="44" rx="22" stroke="#3178C6" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#3178C6"/><text class="lbl" x="32" y="27">TypeScript</text></g></g>
+    <g transform="translate(587,34)"><g class="pill" style="animation-delay:.29s">
+      <rect class="pglow" width="138" height="44" rx="22" stroke="#F7DF1E" filter="url(#bl)"/>
+      <rect class="pbg" width="138" height="44" rx="22" stroke="#F7DF1E" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#F7DF1E"/><text class="lbl" x="32" y="27">JavaScript</text></g></g>
+    <g transform="translate(736,34)"><g class="pill" style="animation-delay:.35s">
+      <rect class="pglow" width="75" height="44" rx="22" stroke="#777BB4" filter="url(#bl)"/>
+      <rect class="pbg" width="75" height="44" rx="22" stroke="#777BB4" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#777BB4"/><text class="lbl" x="32" y="27">PHP</text></g></g>
 
-    <!-- Row 1 -->
-    <g transform="translate(51,34)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0s" fill="freeze"/>
-      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3s" begin="0.2s" repeatCount="indefinite"/>
-        <rect width="151" height="44" rx="22" fill="none" stroke="#3178C6" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.4s" begin="0.3s" repeatCount="indefinite"/></rect>
-        <rect class="pill" width="151" height="44" rx="22" stroke="rgba(49,120,198,0.6)"/>
-        <circle cx="22" cy="22" r="5" fill="#3178C6"><animate attributeName="r" values="5;6.5;5" dur="2.4s" begin="0.3s" repeatCount="indefinite"/></circle>
-        <text class="label" x="36" y="27">TypeScript</text>
-      </g>
-    </g>
-    <g transform="translate(222,34)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.06s" fill="freeze"/>
-      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.2s" begin="0.3s" repeatCount="indefinite"/>
-        <rect width="86" height="44" rx="22" fill="none" stroke="#00599C" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.7s" begin="0.4s" repeatCount="indefinite"/></rect>
-        <rect class="pill" width="86" height="44" rx="22" stroke="rgba(0,89,156,0.6)"/>
-        <circle cx="22" cy="22" r="5" fill="#00599C"><animate attributeName="r" values="5;6.5;5" dur="2.7s" begin="0.4s" repeatCount="indefinite"/></circle>
-        <text class="label" x="36" y="27">C++</text>
-      </g>
-    </g>
-    <g transform="translate(328,34)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.12s" fill="freeze"/>
-      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="2.8s" begin="0.4s" repeatCount="indefinite"/>
-        <rect width="114" height="44" rx="22" fill="none" stroke="#3776AB" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="3s" begin="0.5s" repeatCount="indefinite"/></rect>
-        <rect class="pill" width="114" height="44" rx="22" stroke="rgba(55,118,171,0.6)"/>
-        <circle cx="22" cy="22" r="5" fill="#3776AB"><animate attributeName="r" values="5;6.5;5" dur="3s" begin="0.5s" repeatCount="indefinite"/></circle>
-        <text class="label" x="36" y="27">Python</text>
-      </g>
-    </g>
-    <g transform="translate(462,34)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.18s" fill="freeze"/>
-      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.4s" begin="0.5s" repeatCount="indefinite"/>
-        <rect width="77" height="44" rx="22" fill="none" stroke="#9B4F96" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.6s" begin="0.6s" repeatCount="indefinite"/></rect>
-        <rect class="pill" width="77" height="44" rx="22" stroke="rgba(155,79,150,0.6)"/>
-        <circle cx="22" cy="22" r="5" fill="#9B4F96"><animate attributeName="r" values="5;6.5;5" dur="2.6s" begin="0.6s" repeatCount="indefinite"/></circle>
-        <text class="label" x="36" y="27">C#</text>
-      </g>
-    </g>
-    <g transform="translate(559,34)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.24s" fill="freeze"/>
-      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3s" begin="0.6s" repeatCount="indefinite"/>
-        <rect width="151" height="44" rx="22" fill="none" stroke="#F7DF1E" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.9s" begin="0.7s" repeatCount="indefinite"/></rect>
-        <rect class="pill" width="151" height="44" rx="22" stroke="rgba(247,223,30,0.6)"/>
-        <circle cx="22" cy="22" r="5" fill="#F7DF1E"><animate attributeName="r" values="5;6.5;5" dur="2.9s" begin="0.7s" repeatCount="indefinite"/></circle>
-        <text class="label" x="36" y="27">JavaScript</text>
-      </g>
-    </g>
+    <!-- ══ WEB ══ -->
+    <rect x="26" y="106" width="3" height="24" rx="1.5" fill="#21759B"/>
+    <text class="cat" x="40" y="123">WEB</text>
+    <g transform="translate(162,96)"><g class="pill" style="animation-delay:.41s">
+      <rect class="pglow" width="129" height="44" rx="22" stroke="#21759B" filter="url(#bl)"/>
+      <rect class="pbg" width="129" height="44" rx="22" stroke="#21759B" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#21759B"/><text class="lbl" x="32" y="27">WordPress</text></g></g>
+    <g transform="translate(302,96)"><g class="pill" style="animation-delay:.47s">
+      <rect class="pglow" width="102" height="44" rx="22" stroke="#14B8A6" filter="url(#bl)"/>
+      <rect class="pbg" width="102" height="44" rx="22" stroke="#14B8A6" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#14B8A6"/><text class="lbl" x="32" y="27">WPCode</text></g></g>
+    <g transform="translate(415,96)"><g class="pill" style="animation-delay:.53s">
+      <rect class="pglow" width="93" height="44" rx="22" stroke="#E34F26" filter="url(#bl)"/>
+      <rect class="pbg" width="93" height="44" rx="22" stroke="#E34F26" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#E34F26"/><text class="lbl" x="32" y="27">HTML5</text></g></g>
+    <g transform="translate(519,96)"><g class="pill" style="animation-delay:.59s">
+      <rect class="pglow" width="84" height="44" rx="22" stroke="#1572B6" filter="url(#bl)"/>
+      <rect class="pbg" width="84" height="44" rx="22" stroke="#1572B6" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#1572B6"/><text class="lbl" x="32" y="27">CSS3</text></g></g>
 
-    <!-- Row 2 -->
-    <g transform="translate(127,98)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.3s" fill="freeze"/>
-      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.1s" begin="0.7s" repeatCount="indefinite"/>
-        <rect width="86" height="44" rx="22" fill="none" stroke="#777BB4" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.5s" begin="0.8s" repeatCount="indefinite"/></rect>
-        <rect class="pill" width="86" height="44" rx="22" stroke="rgba(119,123,180,0.6)"/>
-        <circle cx="22" cy="22" r="5" fill="#777BB4"><animate attributeName="r" values="5;6.5;5" dur="2.5s" begin="0.8s" repeatCount="indefinite"/></circle>
-        <text class="label" x="36" y="27">PHP</text>
-      </g>
-    </g>
-    <g transform="translate(233,98)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.36s" fill="freeze"/>
-      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="2.9s" begin="0.8s" repeatCount="indefinite"/>
-        <rect width="142" height="44" rx="22" fill="none" stroke="#21759B" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.8s" begin="0.9s" repeatCount="indefinite"/></rect>
-        <rect class="pill" width="142" height="44" rx="22" stroke="rgba(33,117,155,0.6)"/>
-        <circle cx="22" cy="22" r="5" fill="#21759B"><animate attributeName="r" values="5;6.5;5" dur="2.8s" begin="0.9s" repeatCount="indefinite"/></circle>
-        <text class="label" x="36" y="27">WordPress</text>
-      </g>
-    </g>
-    <g transform="translate(395,98)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.42s" fill="freeze"/>
-      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.3s" begin="0.9s" repeatCount="indefinite"/>
-        <rect width="114" height="44" rx="22" fill="none" stroke="#14B8A6" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="3.1s" begin="1s" repeatCount="indefinite"/></rect>
-        <rect class="pill" width="114" height="44" rx="22" stroke="rgba(20,184,166,0.6)"/>
-        <circle cx="22" cy="22" r="5" fill="#14B8A6"><animate attributeName="r" values="5;6.5;5" dur="3.1s" begin="1s" repeatCount="indefinite"/></circle>
-        <text class="label" x="36" y="27">WPCode</text>
-      </g>
-    </g>
-    <g transform="translate(529,98)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.48s" fill="freeze"/>
-      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3s" begin="1s" repeatCount="indefinite"/>
-        <rect width="105" height="44" rx="22" fill="none" stroke="#E34F26" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.6s" begin="1.1s" repeatCount="indefinite"/></rect>
-        <rect class="pill" width="105" height="44" rx="22" stroke="rgba(227,79,38,0.6)"/>
-        <circle cx="22" cy="22" r="5" fill="#E34F26"><animate attributeName="r" values="5;6.5;5" dur="2.6s" begin="1.1s" repeatCount="indefinite"/></circle>
-        <text class="label" x="36" y="27">HTML5</text>
-      </g>
-    </g>
+    <!-- ══ TOOLING ══ -->
+    <rect x="26" y="168" width="3" height="24" rx="1.5" fill="#2496ED"/>
+    <text class="cat" x="40" y="185">TOOLING</text>
+    <g transform="translate(162,158)"><g class="pill" style="animation-delay:.65s">
+      <rect class="pglow" width="102" height="44" rx="22" stroke="#2496ED" filter="url(#bl)"/>
+      <rect class="pbg" width="102" height="44" rx="22" stroke="#2496ED" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#2496ED"/><text class="lbl" x="32" y="27">Docker</text></g></g>
+    <g transform="translate(275,158)"><g class="pill" style="animation-delay:.71s">
+      <rect class="pglow" width="102" height="44" rx="22" stroke="#ffffff" filter="url(#bl)"/>
+      <rect class="pbg" width="102" height="44" rx="22" stroke="#ffffff" stroke-opacity=".5"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#ffffff"/><text class="lbl" x="32" y="27">Vercel</text></g></g>
+    <g transform="translate(388,158)"><g class="pill" style="animation-delay:.77s">
+      <rect class="pglow" width="75" height="44" rx="22" stroke="#F05032" filter="url(#bl)"/>
+      <rect class="pbg" width="75" height="44" rx="22" stroke="#F05032" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#F05032"/><text class="lbl" x="32" y="27">Git</text></g></g>
+    <g transform="translate(474,158)"><g class="pill" style="animation-delay:.83s">
+      <rect class="pglow" width="138" height="44" rx="22" stroke="#D97757" filter="url(#bl)"/>
+      <rect class="pbg" width="138" height="44" rx="22" stroke="#D97757" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#D97757"/><text class="lbl" x="32" y="27">Claude API</text></g></g>
 
-    <!-- Row 3 -->
-    <g transform="translate(113,162)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.54s" fill="freeze"/>
-      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.2s" begin="1.1s" repeatCount="indefinite"/>
-        <rect width="95" height="44" rx="22" fill="none" stroke="#1572B6" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="2.7s" begin="1.2s" repeatCount="indefinite"/></rect>
-        <rect class="pill" width="95" height="44" rx="22" stroke="rgba(21,114,182,0.6)"/>
-        <circle cx="22" cy="22" r="5" fill="#1572B6"><animate attributeName="r" values="5;6.5;5" dur="2.7s" begin="1.2s" repeatCount="indefinite"/></circle>
-        <text class="label" x="36" y="27">CSS3</text>
-      </g>
-    </g>
-    <g transform="translate(228,162)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.6s" fill="freeze"/>
-      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="2.8s" begin="1.2s" repeatCount="indefinite"/>
-        <rect width="114" height="44" rx="22" fill="none" stroke="#2496ED" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="3s" begin="1.3s" repeatCount="indefinite"/></rect>
-        <rect class="pill" width="114" height="44" rx="22" stroke="rgba(36,150,237,0.6)"/>
-        <circle cx="22" cy="22" r="5" fill="#2496ED"><animate attributeName="r" values="5;6.5;5" dur="3s" begin="1.3s" repeatCount="indefinite"/></circle>
-        <text class="label" x="36" y="27">Docker</text>
-      </g>
-    </g>
-    <g transform="translate(362,162)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.66s" fill="freeze"/>
-      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.4s" begin="1.3s" repeatCount="indefinite"/>
-        <rect width="114" height="44" rx="22" fill="none" stroke="#ffffff" stroke-width="2" filter="url(#glow)" opacity="0.3"><animate attributeName="opacity" values="0.15;0.55;0.15" dur="2.5s" begin="1.4s" repeatCount="indefinite"/></rect>
-        <rect class="pill" width="114" height="44" rx="22" stroke="rgba(255,255,255,0.55)"/>
-        <circle cx="22" cy="22" r="5" fill="#ffffff"><animate attributeName="r" values="5;6.5;5" dur="2.5s" begin="1.4s" repeatCount="indefinite"/></circle>
-        <text class="label" x="36" y="27">Vercel</text>
-      </g>
-    </g>
-    <g transform="translate(496,162)" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.72s" fill="freeze"/>
-      <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.1s" begin="1.4s" repeatCount="indefinite"/>
-        <rect width="151" height="44" rx="22" fill="none" stroke="#D97757" stroke-width="2" filter="url(#glow)" opacity="0.35"><animate attributeName="opacity" values="0.2;0.65;0.2" dur="3.3s" begin="1.5s" repeatCount="indefinite"/></rect>
-        <rect class="pill" width="151" height="44" rx="22" stroke="rgba(217,119,87,0.6)"/>
-        <circle cx="22" cy="22" r="5" fill="#D97757"><animate attributeName="r" values="5;6.5;5" dur="3.3s" begin="1.5s" repeatCount="indefinite"/></circle>
-        <text class="label" x="36" y="27">Claude API</text>
-      </g>
-    </g>
+    <!-- ══ HARDWARE ══ -->
+    <rect x="26" y="230" width="3" height="24" rx="1.5" fill="#C51A4A"/>
+    <text class="cat" x="40" y="247">HARDWARE</text>
+    <g transform="translate(162,220)"><g class="pill" style="animation-delay:.89s">
+      <rect class="pglow" width="111" height="44" rx="22" stroke="#00979D" filter="url(#bl)"/>
+      <rect class="pbg" width="111" height="44" rx="22" stroke="#00979D" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#00979D"/><text class="lbl" x="32" y="27">Arduino</text></g></g>
+    <g transform="translate(284,220)"><g class="pill" style="animation-delay:.95s">
+      <rect class="pglow" width="156" height="44" rx="22" stroke="#C51A4A" filter="url(#bl)"/>
+      <rect class="pbg" width="156" height="44" rx="22" stroke="#C51A4A" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#C51A4A"/><text class="lbl" x="32" y="27">Raspberry Pi</text></g></g>
+    <g transform="translate(451,220)"><g class="pill" style="animation-delay:1.01s">
+      <rect class="pglow" width="147" height="44" rx="22" stroke="#4ade80" filter="url(#bl)"/>
+      <rect class="pbg" width="147" height="44" rx="22" stroke="#4ade80" stroke-opacity=".55"/>
+      <circle class="pdot" cx="18" cy="22" r="5" fill="#4ade80"/><text class="lbl" x="32" y="27">Electronics</text></g></g>
   </g>
 </svg>
