@@ -4,15 +4,16 @@
       .lbl { font-family: "SF Mono", Consolas, "Courier New", monospace; font-size: 15px; fill: #e2e8f0; }
       .cat { font-family: "SF Mono", Consolas, "Courier New", monospace; font-size: 13px; letter-spacing: 2.5px; fill: #64748b; }
 
-      @keyframes pop    { from { opacity: 0; transform: translateY(10px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+      /* Decorative only: every pill is fully visible at its base state, so nothing
+         disappears if animations do not run. */
       @keyframes bob    { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3.5px); } }
       @keyframes breathe{ 0%,100% { opacity: .18; } 50% { opacity: .58; } }
       @keyframes beat   { 0%,100% { r: 5; } 50% { r: 6.4; } }
       @keyframes drift  { 0%,100% { transform: translate(0,0); } 50% { transform: translate(22px,-14px); } }
       @keyframes drift2 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-18px,12px); } }
 
-      .pill  { opacity: 0; animation: pop .55s cubic-bezier(.2,.8,.3,1) forwards, bob 4.6s ease-in-out infinite 1s; }
-      .pglow { animation: breathe 3.4s ease-in-out infinite; fill: none; stroke-width: 2.4; }
+      .pill  { animation: bob 4.6s ease-in-out infinite; }
+      .pglow { animation: breathe 3.4s ease-in-out infinite; fill: none; stroke-width: 2.4; opacity: .3; }
       .pdot  { animation: beat 3.4s ease-in-out infinite; }
       .pbg   { fill: #ffffff; fill-opacity: .05; stroke-width: 1.4; }
       .o1    { animation: drift 15s ease-in-out infinite; }

@@ -12,7 +12,7 @@
     </linearGradient>
     <filter id="b" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
   </defs>
-  <rect class="gl" x="1.5" y="1.5" width="147" height="49" rx="24.5" fill="none" stroke="#22d3ee" stroke-width="2.4" filter="url(#b)"/>
+  <rect class="gl" opacity=".45" x="1.5" y="1.5" width="147" height="49" rx="24.5" fill="none" stroke="#22d3ee" stroke-width="2.4" filter="url(#b)"/>
   <rect x="1.5" y="1.5" width="147" height="49" rx="24.5" fill="#0d1220" stroke="#22d3ee" stroke-opacity=".5" stroke-width="1.4"/>
   <g class="rg" fill="none" stroke="url(#cg)" stroke-width="2.2" stroke-linecap="round">
     <circle cx="27" cy="26" r="8.5" stroke-dasharray="9 7"/>

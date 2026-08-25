@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg?v=7" alt="Ruslan Labinski — Game Developer · Web Developer · Maker" width="100%">
+<img src="assets/hero.svg?v=8" alt="Ruslan Labinski — Game Developer · Web Developer · Maker" width="100%">
 
 </div>
 
@@ -8,7 +8,7 @@
 
 ### ◆ &nbsp; whoami
 
-<img src="assets/divider.svg?v=7" alt="" width="100%" height="10">
+<img src="assets/divider.svg?v=8" alt="" width="100%" height="10">
 
 <table>
 <tr><td width="62%" valign="top">
@@ -43,7 +43,7 @@ fuel:     coffee + solder fumes
 
 ### ◆ &nbsp; what I build
 
-<img src="assets/divider.svg?v=7" alt="" width="100%" height="10">
+<img src="assets/divider.svg?v=8" alt="" width="100%" height="10">
 
 <table>
 <tr><td width="50%" valign="top">
@@ -94,17 +94,17 @@ just fits. Where the software finally has to meet physics.
 
 ### ◆ &nbsp; stack
 
-<img src="assets/divider.svg?v=7" alt="" width="100%" height="10">
+<img src="assets/divider.svg?v=8" alt="" width="100%" height="10">
 
 <div align="center">
-<img src="assets/stack.svg?v=7" alt="C++, C#, Python, TypeScript, JavaScript, PHP, WordPress, WPCode, HTML5, CSS3, Docker, Vercel, Git, Claude API, Arduino, Raspberry Pi, Electronics" width="100%">
+<img src="assets/stack.svg?v=8" alt="C++, C#, Python, TypeScript, JavaScript, PHP, WordPress, WPCode, HTML5, CSS3, Docker, Vercel, Git, Claude API, Arduino, Raspberry Pi, Electronics" width="100%">
 </div>
 
 <br>
 
 ### ◆ &nbsp; how I work
 
-<img src="assets/divider.svg?v=7" alt="" width="100%" height="10">
+<img src="assets/divider.svg?v=8" alt="" width="100%" height="10">
 
 ```diff
 + Ship it, then tune against the real thing — not a mockup
@@ -119,7 +119,7 @@ just fits. Where the software finally has to meet physics.
 
 ### ◆ &nbsp; by the numbers
 
-<img src="assets/divider.svg?v=7" alt="" width="100%" height="10">
+<img src="assets/divider.svg?v=8" alt="" width="100%" height="10">
 
 <div align="center">
 
@@ -136,13 +136,13 @@ just fits. Where the software finally has to meet physics.
 
 ### ◆ &nbsp; find me
 
-<img src="assets/divider.svg?v=7" alt="" width="100%" height="10">
+<img src="assets/divider.svg?v=8" alt="" width="100%" height="10">
 
 <div align="center">
 
-<a href="https://guns.lol/easyfragz"><img src="assets/link-guns.svg?v=7" alt="guns.lol/easyfragz" height="52"></a>
+<a href="https://guns.lol/easyfragz"><img src="assets/link-guns.svg?v=8" alt="guns.lol/easyfragz" height="52"></a>
 &nbsp;&nbsp;
-<a href="https://www.instagram.com/easy.fragz/"><img src="assets/link-instagram.svg?v=7" alt="Instagram" height="52"></a>
+<a href="https://www.instagram.com/easy.fragz/"><img src="assets/link-instagram.svg?v=8" alt="Instagram" height="52"></a>
 
 <br><br>
 
