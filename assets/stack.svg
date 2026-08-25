@@ -1,0 +1,42 @@
+<svg viewBox="0 0 1200 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .box { fill: rgba(255,255,255,0.03); stroke-width: 1.3; }
+      .label { font-family: Consolas, 'Courier New', monospace; font-size: 20px; fill: #e2e8f0; }
+    </style>
+  </defs>
+
+  <!-- Row 1 -->
+  <g transform="translate(20,20)">
+    <rect class="box" width="370" height="90" rx="14" stroke="rgba(33,117,155,0.55)"/>
+    <circle cx="34" cy="45" r="7" fill="#21759B"/>
+    <text class="label" x="56" y="52">WordPress</text>
+  </g>
+  <g transform="translate(415,20)">
+    <rect class="box" width="370" height="90" rx="14" stroke="rgba(119,123,180,0.55)"/>
+    <circle cx="34" cy="45" r="7" fill="#777BB4"/>
+    <text class="label" x="56" y="52">PHP</text>
+  </g>
+  <g transform="translate(810,20)">
+    <rect class="box" width="370" height="90" rx="14" stroke="rgba(227,79,38,0.55)"/>
+    <circle cx="34" cy="45" r="7" fill="#E34F26"/>
+    <text class="label" x="56" y="52">HTML5</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(20,130)">
+    <rect class="box" width="370" height="90" rx="14" stroke="rgba(21,114,182,0.55)"/>
+    <circle cx="34" cy="45" r="7" fill="#1572B6"/>
+    <text class="label" x="56" y="52">CSS3</text>
+  </g>
+  <g transform="translate(415,130)">
+    <rect class="box" width="370" height="90" rx="14" stroke="rgba(247,223,30,0.55)"/>
+    <circle cx="34" cy="45" r="7" fill="#F7DF1E"/>
+    <text class="label" x="56" y="52">JavaScript</text>
+  </g>
+  <g transform="translate(810,130)">
+    <rect class="box" width="370" height="90" rx="14" stroke="rgba(217,119,87,0.55)"/>
+    <circle cx="34" cy="45" r="7" fill="#D97757"/>
+    <text class="label" x="56" y="52">Claude API</text>
+  </g>
+</svg>

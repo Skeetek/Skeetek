@@ -1,8 +1,6 @@
 <div align="center">
 
-# easyfragz
-
-**Developer & creator** — building with WordPress, PHP, and frontend, with AI baked into the workflow.
+<img src="assets/hero.svg" alt="easyfragz — Web Developer, WordPress & AI-Assisted Builds" width="100%">
 
 </div>
 
@@ -10,7 +8,7 @@
 
 ## ◈ &nbsp;whoami
 
-I build and ship small web products end-to-end — layout, styling, WordPress backend, deploy.
+I build and ship small web products **end-to-end** — layout, styling, WordPress backend, deploy.
 Claude and other AI tools are part of my day-to-day workflow, not a gimmick bolted on top.
 
 <br>
@@ -26,14 +24,7 @@ Claude and other AI tools are part of my day-to-day workflow, not a gimmick bolt
 ## ◈ &nbsp;stack
 
 <div align="center">
-
-![WordPress](https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Claude](https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-
+<img src="assets/stack.svg" alt="WordPress, PHP, HTML5, CSS3, JavaScript, Claude API" width="100%">
 </div>
 
 <br>
@@ -53,6 +44,6 @@ Claude and other AI tools are part of my day-to-day workflow, not a gimmick bolt
 
 <div align="center">
 
-[Links](https://guns.lol/easyfragz) &nbsp;·&nbsp; [Instagram](https://www.instagram.com/easy.fragz/)
+<a href="https://guns.lol/easyfragz"><img src="assets/link-guns.svg" alt="Links" height="46"></a>&nbsp;&nbsp;<a href="https://www.instagram.com/easy.fragz/"><img src="assets/link-instagram.svg" alt="Instagram" height="46"></a>
 
 </div>
