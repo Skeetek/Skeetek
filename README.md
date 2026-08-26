@@ -161,6 +161,8 @@ contact extraction — turning raw business data into a qualified outbound list.
 <a href="https://guns.lol/easyfragz"><img src="assets/link-guns.svg?v=8" alt="guns.lol/easyfragz" height="52"></a>
 &nbsp;&nbsp;
 <a href="https://www.instagram.com/easy.fragz/"><img src="assets/link-instagram.svg?v=8" alt="Instagram" height="52"></a>
+&nbsp;&nbsp;
+<a href="https://www.linkedin.com/in/ruslan-labinski-3217ba2a5/"><img src="assets/link-linkedin.svg?v=1" alt="LinkedIn" height="52"></a>
 
 <br><br>
 
